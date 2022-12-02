@@ -3,19 +3,19 @@ create database Mehmet;
 
 --DDL - DATA DEFINITION LANG.
 --CREATE - TABLO OLUŞTURMA
-CREATE TABLE ogrenciler2
+CREATE TABLE ogrenciler5
 (
-ogrenci_no char(7),
-isim varchar(20),
+ogrenci_no char(7),--uzunlugunu bildiğimiz stringler için char kullanılır
+isim varchar(20),  --uzunlugunu bilmediğimiz stringler için varchar kullanılır
 soyisim varchar(25),
 not_ort real,-- Ondalıklı sayılar için kullanılır(Double gibi)
-kayit_tarih date
-);
+kayit_tarih date);
+
 --VAROLAN TABLODAN YENİ BİR TABLO OLUŞTURMA
-CREATE TABLE ogrenci_notlari
+CREATE TABLE ogrenci_notlari1
 AS -- Benzer tablodaki başlıklarla ve data tipleriyle yeni bir tablo oluşturmak için
 --normal tablo oluştururken ki parantezler yerine AS kullanıp Select komutuyla almak istediğimiz verileri alırız
-SELECT isim,soyisim,not_ort FROM ogrenciler2;
+SELECT isim,soyisim,not_ort FROM ogrenciler;
 
 -- DML - DATA MANUPULATION LANG.
 -- INSERT (Database'e veri ekleme)
